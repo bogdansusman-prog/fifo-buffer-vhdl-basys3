@@ -4,6 +4,12 @@ A 16-entry × 16-bit **FIFO (First-In, First-Out) memory** written in VHDL and r
 
 Built as an extra-credit project for the **Digital Systems Design** course (2025).
 
+## Demo
+
+[![FIFO buffer running on the Basys 3, demo video](https://img.youtube.com/vi/7EwYQlkeTYE/hqdefault.jpg)](https://youtu.be/7EwYQlkeTYE)
+
+▶️ [Watch the demo on YouTube](https://youtu.be/7EwYQlkeTYE)
+
 ## Features
 
 - **16 × 16-bit storage** set by the generics `DEPTH` and `WIDTH`
