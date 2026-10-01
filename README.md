@@ -2,7 +2,7 @@
 
 A 16-entry × 16-bit **FIFO (First-In, First-Out) memory** written in VHDL and running on a **Digilent Basys 3** board (Artix-7). Values are entered on the switches and written or read with buttons. The current value is shown in hexadecimal on the 7-segment display, and LEDs show the FIFO state (empty, last free slot, full).
 
-Built as an extra-credit project for the **Digital Systems Design** course (2025).
+Built as an extra-credit project for the **Digital Systems Design** course (*Proiectarea Sistemelor Numerice*, 2025). The design was first made for the Nexys 4 board (8-digit display) and later ported to the Basys 3 (4-digit display).
 
 ## Demo
 
@@ -53,6 +53,21 @@ Built as an extra-credit project for the **Digital Systems Design** course (2025
 | `LD1` | `last` | Only one free slot left |
 | `LD2` | `full` | FIFO is full |
 | 7-segment display | — | Last value written or read, in hex |
+
+## Documentation
+
+The full project report, in Romanian, is in [`docs/fifo-documentation-ro.pdf`](docs/fifo-documentation-ro.pdf). It covers:
+
+- the specification and the block diagram
+- the split into a control unit (UC) and an execution unit (UE)
+- the resources needed, the control-unit flowchart and the detailed hand-drawn schematic
+- a user manual
+- design justification: synchronous RAM instead of separate registers, MPG instead of a counter-based debouncer, a multiplexed display
+
+## Possible extensions
+
+- **Asynchronous FIFO:** dual-port RAM with independent read and write clocks, and synchronized pointers for the full/empty logic
+- **UART/SPI buffer:** connect `data_in`/`data_out` to a serial transceiver so the FIFO buffers serial traffic
 
 ## Building
 
